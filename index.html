@@ -1,0 +1,242 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); color: var(--color-text-primary); }
+  .wrap { max-width: 680px; padding: 0 0 2rem; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 4px; letter-spacing: .03em; }
+  .badge-wait { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .badge-core { background: var(--color-background-info); color: var(--color-text-info); }
+  .badge-pass { background: var(--color-background-success); color: var(--color-text-success); }
+  .badge-warn { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .badge-neutral { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+  .hdr { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: .08em; text-transform: uppercase; margin: 1.5rem 0 .5rem; border-bottom: 0.5px solid var(--color-border-tertiary); padding-bottom: 4px; }
+  .verdict-block { border: 1.5px solid var(--color-border-warning); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin: 1rem 0; }
+  .verdict-title { font-size: 20px; font-weight: 500; color: var(--color-text-warning); }
+  .verdict-sub { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin: .5rem 0; }
+  th { text-align: left; color: var(--color-text-secondary); font-weight: 500; padding: 5px 8px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  td { padding: 5px 8px; border-bottom: 0.5px solid var(--color-border-tertiary); vertical-align: top; line-height: 1.5; }
+  tr:last-child td { border-bottom: none; }
+  .red { color: var(--color-text-danger); }
+  .grn { color: var(--color-text-success); }
+  .amb { color: var(--color-text-warning); }
+  .section-note { font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; margin: .4rem 0; }
+  .triline { border-left: 3px solid var(--color-border-secondary); padding-left: .75rem; margin: .5rem 0; }
+  .triline-lbl { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing:.06em; }
+  .triline-body { font-size: 13px; line-height: 1.6; margin-top: 2px; }
+  .adv { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: .75rem 1rem; margin: .5rem 0; background: var(--color-background-secondary); }
+  .adv-lbl { font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--color-text-danger); margin-bottom: 4px; }
+  .adv-body { font-size: 13px; line-height: 1.6; color: var(--color-text-primary); }
+  .sym-lbl { font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--color-text-success); margin-bottom: 4px; }
+  .kv { display: flex; gap: 8px; margin: .25rem 0; font-size: 13px; }
+  .kv-k { color: var(--color-text-secondary); min-width: 175px; flex-shrink: 0; }
+  .kv-v { font-weight: 500; }
+  .irr-hi { color: var(--color-text-danger); font-weight: 500; }
+  .irr-ok { color: var(--color-text-success); font-weight: 500; }
+  .irr-meh { color: var(--color-text-warning); font-weight: 500; }
+  .gate1box { border: 1px solid var(--color-border-secondary); border-radius: var(--border-radius-md); padding: .75rem 1rem; margin: .5rem 0; background: var(--color-background-secondary); }
+</style>
+
+<div class="wrap">
+
+  <div style="font-size:11px; color:var(--color-text-secondary); letter-spacing:.05em; text-transform:uppercase; margin-bottom:.25rem;">Hybrid Portfolio Architect V4.2.1 — DSM Engine</div>
+  <div style="font-size:22px; font-weight:500; margin-bottom:.15rem;">Walmart Inc. (WMT)</div>
+  <div style="font-size:13px; color:var(--color-text-secondary); margin-bottom:1rem;">Consumer Staples Merchandise Retail &middot; Analysis Date: June 26, 2026 &middot; Price: $115.69</div>
+
+  <div class="verdict-block">
+    <div class="verdict-title">⏳ WAIT FOR STRIKE PRICE</div>
+    <div class="verdict-sub">Classification: CORE &middot; Strike: $95–$105 (Margin of Safety) / $105–$120 (Speculative Entry, current zone) &middot; Exceptional business, priced for a level of perfection that leaves little room for error</div>
+  </div>
+
+  <div class="hdr">Pre-Verdict Checklist — Gate 1: Data Freshness (Full Required Output)</div>
+  <div class="gate1box">
+    <div class="kv"><span class="kv-k">(a) VL report age</span><span class="kv-v amb">70 days (April 17 → June 26) — well past the 28-day threshold</span></div>
+    <div class="kv"><span class="kv-k">(b) Post-VL material developments</span><span class="kv-v red">YES, significant. VL's report was written around fears of an "Iran War" driving energy costs and consumer sentiment hitting multi-year lows — that geopolitical/oil-price situation has since reversed sharply (WTI fell ~30% from ~$109 to ~$76 per the CVX Gate 1 finding earlier this cycle). Separately, Q1 FY2027 results (reported May 21, after VL's report) beat guidance meaningfully: constant-currency sales grew ~5.7%, ~120bps above the top end of guidance, adding nearly $10B in YoY revenue despite absorbing a ~250bps fuel-cost drag. VL's framing of Q1 as "the softest" quarter understated the actual result.</span></div>
+    <div class="kv"><span class="kv-k">(c) EPS estimates updated</span><span class="kv-v amb">YES. VL's 2026 EPS estimate of $2.90 was set before Q1 actuals were known. Q1 adjusted EPS came in ahead of the prior year's comparable figure, and management reaffirmed full-year sales growth guidance of ~4% while expecting operating income to grow faster than sales — consistent with, and modestly more constructive than, VL's $2.90 estimate. No major downward revision needed; if anything, the post-VL data supports the existing estimate or slightly better.</span></div>
+    <div class="kv"><span class="kv-k">(d) FG/VL divergence</span><span class="kv-v">FG's forward Growth Rate (10.53%) is reasonably close to VL's stated 2029-31 framework (9.5% earnings growth estimate) — no material divergence requiring dual-scenario treatment. Both sources are directionally aligned on the growth trajectory, diverging mainly on starting multiple, not growth rate.</span></div>
+    <div class="kv"><span class="kv-k">(e) Pending M&amp;A / rumor search</span><span class="kv-v grn">Search conducted per Gate 1e. No rumors of WMT being a buyout target found (implausible given size). One CONFIRMED, already-announced acquisition found: Walmart's $1.4B purchase of ad-tech platform Vibe.co (June 23, 2026) to expand connected-TV advertising access for smaller brands — small, bolt-on, immediately relevant to Gate 3 below. No other pending or rumored M&amp;A activity identified as of June 26, 2026, stated affirmatively per Gate 1e requirement.</span></div>
+  </div>
+  <div class="section-note"><strong>Override 1 applies.</strong> The oil-price reversal (already documented in this portfolio's CVX review) is directly relevant here too: VL's bearish-leaning near-term commentary on consumer sentiment was partly built on an energy-cost spike that has since reversed. Combined with the Q1 beat, the Updated Base case below is modestly more constructive than VL's own framing, not less.</div>
+
+  <div class="hdr">Sector Protocol Activation</div>
+  <div class="section-note">No BDC/REIT/Semiconductor/Industrial-Cyclical protocol applies (Beta 0.75/0.60 depending on source, well under the 1.15 trigger). Standard Hybrid Operational Protocol governs. This is a mega-cap consumer staples retailer increasingly monetizing a technology/advertising layer on top of its core business — closer in spirit to ABBV's "platform compounder extending via active BD" pattern than to a traditional retailer.</div>
+
+  <div class="hdr">Module 2 — Safety Score</div>
+  <table>
+    <thead><tr><th>Component</th><th>Input</th><th>Score</th></tr></thead>
+    <tbody>
+      <tr><td>Credit Base (S&amp;P AA)</td><td>AA &rarr; 9.0</td><td>9.0</td></tr>
+      <tr><td>Growth Bonus (5-yr Div CAGR ~5%)</td><td>5% — right at the &gt;5% threshold for the smaller bonus tier</td><td class="grn">+1.0</td></tr>
+      <tr><td>Zombified Capital Test</td><td>LT Debt/Capital 33.9% (FG) / 29% (VL) — far below 60% threshold, and revenue growth ~4.5-5.5% comfortably clears 2% — CLEAR by a wide margin</td><td>0.0</td></tr>
+      <tr><td>AI Displacement Audit</td><td>INVERSE BENEFIT — Sparky and Walmart Connect's AI tooling are demand drivers and margin enhancers for Walmart's own business (higher AOV, faster ad creative, better fulfillment), not a commoditization threat to its core retail/logistics moat. No penalty; documented explicitly per the framework's inverse-benefit provision.</td><td>0.0</td></tr>
+      <tr><td><strong>Safety Score</strong></td><td></td><td><strong>10.0 / 10 (capped)</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="section-note">This is corroborated, not just mechanical: VL's own Earnings Predictability score is 100/100 — the maximum possible, and the only such case in this portfolio's coverage to date. Price Stability (95) and Price Growth Persistence (85) are similarly elite. Unlike CVX's 10/10 (balance-sheet-driven but earnings-volatile) or BMY's split scores, WMT's safety profile is uniformly excellent across every dimension the framework measures.</div>
+
+  <div class="hdr">Structural Audit — SQ Qualifier Gates</div>
+  <table>
+    <thead><tr><th>Gate</th><th>Test</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>7.1.1 Sustainability</td><td>Yield 0.86% — far below the 5% secular-decline trigger; not a yield-driven holding</td><td><span class="badge badge-pass">PASS — N/A</span></td></tr>
+      <tr><td>7.1.8 Buyback Auth.</td><td>$4.6B repurchased in a single quarter (Q1), cash-funded from strong operating cash flow, not debt issuance. P/E well above 15x, but buybacks are not the EPS growth driver here — organic earnings growth is. CLEAR.</td><td><span class="badge badge-pass">PASS</span></td></tr>
+      <tr><td>7.1.9 Ghost Yield</td><td>Div/FCF: minimal — dividend payout ratio ~28-35% of net profit per VL's own table, comfortably covered by a business generating tens of billions in FCF annually</td><td><span class="badge badge-pass">PASS</span></td></tr>
+      <tr><td>7.1.3 AI Displacement</td><td>Documented above as inverse benefit — Sparky drives ~35% higher average order value among users, and Walmart Connect's AI tooling is accelerating a high-margin advertising business, not threatening the core moat</td><td><span class="badge badge-pass">CLEAR — INVERSE BENEFIT</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="hdr">Pre-Verdict Checklist — Gate 2: Segment Completeness</div>
+  <table>
+    <thead><tr><th>Segment</th><th>% Revenue (approx.)</th><th>Bear Assumption</th><th>Trough EPS Contribution</th></tr></thead>
+    <tbody>
+      <tr><td>Walmart U.S. (stores + e-commerce)</td><td>~68%</td><td>Tariff-driven price increases dampen discretionary spending; low-income household pressure persists despite high-income trade-down benefit</td><td>Still the dominant earnings base — grocery (60% of US sales) provides a defensive floor even in a consumer pullback</td></tr>
+      <tr><td>Walmart International</td><td>~18%</td><td>FX volatility and country-specific macro risk (Mexico, China, India via Flipkart, Canada, UK); generally smaller margin contributor historically</td><td>Modest, diversified — no single foreign market large enough to be a standalone risk</td></tr>
+      <tr><td>Sam's Club</td><td>~14%</td><td>Membership-model resilience tends to hold up well in value-seeking environments; less exposed to general merchandise discretionary pressure</td><td>Defensive, historically reliable contributor</td></tr>
+      <tr><td>Advertising / Walmart Connect / membership (high-margin overlay)</td><td>Embedded across segments; ~1/3 of operating income per VL's narrative</td><td>Ad spend could soften in a broader recession, but retail media has structural tailwinds (eMarketer projects US retail media spend approaching $98B by 2028) independent of Walmart-specific execution</td><td>This is the swing factor for margin expansion, not a downside risk on its own</td></tr>
+    </tbody>
+  </table>
+  <div class="section-note">Bear case portability test: even if the high-margin advertising/membership overlay disappointed entirely, the core US/International/Sam's Club retail business — anchored by grocery, the most recession-resistant category — would still represent the large majority of earnings. <span class="grn">Bear case is portable</span> — this does not resemble BMY's or MRK's concentrated single-product cliff risk. The more relevant risk is valuation-level (Gate 5 below), not segment-concentration risk.</div>
+
+  <div class="hdr">Pre-Verdict Checklist — Gate 3: Platform Optionality</div>
+  <table>
+    <thead><tr><th>Optionality Item</th><th>Status</th><th>Probability</th><th>Revenue Date</th></tr></thead>
+    <tbody>
+      <tr><td>Sparky AI shopping agent</td><td>CONFIRMED commercial impact: ~half of app users have engaged with it, ~35% higher AOV among users, units purchased through it "more than quadrupled" quarter-over-quarter per management; integrated into ChatGPT and Gemini</td><td><span class="badge badge-pass">High &gt;70% — already monetizing</span></td><td>Already generating revenue impact; in the Updated Base case</td></tr>
+      <tr><td>Walmart Connect / retail media (incl. Marty agentic ad assistant, in-Sparky ads)</td><td>CONFIRMED — global ad revenue +46% FY26, +37% in Q1 FY27; ~1/3 of operating income; broad-based growth across US, international, and Vizio/CTV</td><td><span class="badge badge-pass">High &gt;70% — already monetizing</span></td><td>Already a major, growing profit contributor; in the Updated Base case</td></tr>
+      <tr><td>Vibe.co acquisition ($1.4B, June 23, 2026)</td><td>CONFIRMED, signed — expands connected-TV ad access for smaller brands</td><td><span class="badge badge-core">Medium ~50% (per Gate 3e default for newly confirmed, not-yet-integrated M&amp;A)</span></td><td>2027+ for measurable contribution; small relative to WMT's scale</td></tr>
+      <tr><td>Constellation Energy 15-year nuclear PPA (announced June 23, 2026)</td><td>CONFIRMED — long-term clean energy procurement, supports data center/AI infrastructure cost stability rather than being a near-term EPS driver</td><td><span class="badge badge-neutral">Infrastructure/cost-stability item, not a revenue driver</span></td><td>Long-dated; relevant to cost structure, not modeled as EPS upside</td></tr>
+      <tr><td>India / Flipkart quick commerce expansion</td><td>Active build-out (1,000+ micro-fulfillment centers reported), competing directly with Amazon in a large, underpenetrated market</td><td><span class="badge badge-warn">Low-Medium ~35% — high optionality, high execution risk, foreign market</span></td><td>2028+ for meaningful contribution</td></tr>
+    </tbody>
+  </table>
+  <div class="section-note">Unlike PAYX's WISE (unproven, press-release-driven) or even ABBV's pipeline (real but pre-revenue), <strong>Sparky and Walmart Connect are both already confirmed, independently-corroborated revenue and margin drivers today</strong> — this is the strongest, most evidenced optionality case reviewed in this portfolio's cycle. <strong>Platform premium of 15%</strong> applied to the bull EPS scenario, justified by: two already-monetizing AI/advertising initiatives with independently verified metrics (not just management claims), a credible new bolt-on (Vibe.co) extending the ad business, and continued international optionality (Flipkart) not yet reflected in consensus numbers.</div>
+
+  <div class="hdr">Module 13 — SQ Valuation Governor</div>
+  <table>
+    <thead><tr><th>Input</th><th>VL Base</th><th>Updated Base</th><th>Bull (+ optionality)</th></tr></thead>
+    <tbody>
+      <tr><td>Forward EPS Growth (3–5yr)</td><td>~9.5% (VL '23-'25 to '29-'31 CAGR)</td><td>~11% (Q1 beat + advertising/Sparky momentum)</td><td>~14% (+ Vibe.co, Flipkart, continued ad acceleration)</td></tr>
+      <tr><td>Current Yield</td><td>0.86%</td><td>0.86%</td><td>0.86%</td></tr>
+      <tr><td>Quality Score (avg VL/FG, scaled)</td><td>~14.5 (VL Earnings Predictability 100, but FG score only 59 — Growth/Profitability sub-scores pull this down)</td><td>~15.5</td><td>~17</td></tr>
+      <tr><td>SQ Target P/E (formula)</td><td>~15.8x</td><td>~17.4x</td><td>~21.4x (incl. platform premium)</td></tr>
+      <tr><td>Rule 9.1 MAV Cap</td><td>N/A (growth &gt;5%)</td><td>N/A</td><td>N/A</td></tr>
+      <tr><td><strong>Final SQ Target P/E</strong></td><td><strong>15.8x</strong></td><td><strong>17.4x</strong></td><td><strong>21.4x</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="section-note"><strong>This is the central tension in the entire analysis.</strong> The stock currently trades at 42.16x blended P/E (VL) / ~40-46x trailing depending on source — roughly 2.4-2.7x the SQ formula's Updated Base fair-value multiple. VL's own stated Normal P/E (28.94x) and Avg Ann'l P/E target (35.0x) are themselves well below the current multiple. Even the bull-case, platform-premium-inclusive SQ Target P/E of 21.4x is barely half of where the stock actually trades. <strong>WMT is not undervalued by this framework's methodology at any scenario modeled</strong> — VL's own analyst commentary states plainly that "at roughly 45 times forward earnings, the stock is priced to perfection."</div>
+
+  <div class="hdr">Module 14 — 2030 Back-Calc (Ultimate Arbiter)</div>
+  <table>
+    <thead><tr><th>Scenario</th><th>2030 EPS</th><th>Target P/E</th><th>2030 Price</th><th>+Div (4yr)</th><th>IRR from $115.69</th></tr></thead>
+    <tbody>
+      <tr><td>(a) VL Base</td><td>$4.10</td><td>15.8x</td><td>$64.78</td><td>$4.30</td><td class="irr-hi">~−12.5%</td></tr>
+      <tr><td>(b) Updated Base</td><td>$4.40</td><td>17.4x</td><td>$76.56</td><td>$4.20</td><td class="irr-hi">~−9.3%</td></tr>
+      <tr><td>(c) Bear (multiple reverts toward historical norm faster, growth disappoints)</td><td>$3.80</td><td>13.0x</td><td>$49.40</td><td>$4.00</td><td class="irr-hi">~−18.0%</td></tr>
+      <tr><td>(d) Bull (Sparky/advertising fully re-rate the multiple, platform premium sustained)</td><td>$5.00</td><td>21.4x</td><td>$107.00</td><td>$4.50</td><td class="irr-hi">~−1.8%</td></tr>
+    </tbody>
+  </table>
+  <div class="section-note"><strong>Every single scenario, including the bull case, produces a negative IRR at the current price.</strong> This is not a function of pessimistic EPS assumptions — EPS growth in all four scenarios is healthy, ranging from solid (VL Base) to strong (Bull). The problem is entirely the starting multiple: at 42-46x trailing earnings, even a fully-realized bull case where the platform premium holds and EPS grows at 14% doesn't generate enough terminal value to overcome the math of paying 2x-plus the framework's fair-value estimate today. <strong>This is the most extreme valuation-versus-quality disconnect of any name reviewed in this portfolio's cycle</strong> — a 10/10 Safety Score and a genuinely excellent, well-evidenced growth story paired with a price that the framework's own mechanics say doesn't clear the hurdle in any scenario.</div>
+
+  <div class="hdr">Pre-Verdict Checklist — Gate 4: Bull Case Steel Man</div>
+  <table>
+    <thead><tr><th style="min-width:150px;">Steel Man Argument</th><th>Source</th><th>Adversarial Counterpoint</th><th>Conceded</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>SM-1:</strong> Walmart is no longer just a retailer — Sparky and Walmart Connect are genuinely transforming the business into a high-margin technology/advertising platform layered on top of the retail base, and that mix-shift justifies a structurally higher multiple than the company's own history, not a reversion to it.</td>
+        <td>Independently corroborated Sparky AOV/engagement metrics; Walmart Connect ad revenue growth (+46% FY26, +37% Q1 FY27); ~1/3 of operating income from advertising/membership</td>
+        <td>This is the strongest, best-evidenced part of the bull case in this entire portfolio cycle, and it's real — not aspirational. However, "justifies a higher multiple than history" and "justifies the <em>current</em> 42-46x multiple, multiple turns above even this analysis's generous bull-case target of 21.4x" are different claims. The mix-shift story supports re-rating from, say, 22x to 28x — it does not obviously support 45x. The market may be pricing in a multi-decade compounding story that this framework's 7-year lock-up window cannot fully capture, which is a real methodological limitation, not a rebuttal.</td>
+        <td><span class="badge badge-warn">Partial</span></td>
+      </tr>
+      <tr>
+        <td><strong>SM-2:</strong> Analyst consensus is overwhelmingly bullish — 26-42 analysts depending on source, Buy/Strong Buy consensus, average price targets of $138-142, roughly 20% above current price — suggesting the broader market doesn't see this as "priced to perfection" the way VL's commentary frames it.</td>
+        <td>S&amp;P Global/TipRanks consensus data (42 analysts, $138.95 avg target); Public.com (29 analysts, Buy consensus)</td>
+        <td>This is accurate and a legitimate data point the Adversarial Analyst cannot dismiss. However, sell-side price targets are typically 12-month relative-return forecasts anchored to current multiples, not 7-year absolute IRR-vs-hurdle calculations — a $139 target implies continued multiple persistence (not expansion or even full reversion), which is a different question than this framework's 10%-IRR-over-7-years test. The two methodologies can both be "correct" on their own terms while reaching different conclusions about whether today's entry clears a specific return hurdle.</td>
+        <td><span class="badge badge-warn">Partial</span></td>
+      </tr>
+      <tr>
+        <td><strong>SM-3:</strong> WMT's defensive characteristics (grocery-anchored, trade-down beneficiary in a weak consumer environment, AA credit, 100/100 earnings predictability) mean this is about as close to a "can't go too wrong" mega-cap as exists — even if the IRR undershoots the 10% hurdle, capital is extremely unlikely to be impaired here the way it could be in BMY's or CVX's bear cases.</td>
+        <td>VL Safety rank 1, S&amp;P AA rating, grocery as 60% of US sales, documented trade-down behavior from $100K+ households</td>
+        <td>This is correct and important context, and the framework's own Module 14 bear case (~−18% IRR) reflects multiple compression risk, not business deterioration or capital-impairment risk — the EPS keeps growing in every single scenario modeled. Cannot rebut the safety claim; it simply doesn't change the valuation math, which is the actual basis for the WAIT verdict.</td>
+        <td><span class="badge badge-pass">Conceded</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="section-note"><strong>Verdict assessment:</strong> 1 full concession + 2 partial concessions. Per Rule AA-2, this does not reach the 2-full-concession threshold required for a mandatory verdict upgrade — WAIT FOR STRIKE stands. The Steel Man here is unusually strong relative to most names reviewed, but it argues for "this is an exceptional business," which this framework has never disputed — it does not argue for "this clears a 10% IRR hurdle at 42-46x earnings," which is the specific question Module 14 is built to answer.</div>
+
+  <div class="adv">
+    <div class="adv-lbl">⚡ Adversarial Analyst — The Honest Tension</div>
+    <div class="adv-body">
+      <p style="margin-bottom:.5rem;">There's no satisfying way to reconcile this one. WMT is, by nearly every measure this framework tracks, the highest-quality business reviewed in this portfolio's cycle — the only 100/100 Earnings Predictability score, a 10/10 Safety Score, genuinely verified (not just claimed) AI-driven margin expansion, and a defensive moat that performs well in exactly the kind of consumer-pressured environment the macro backdrop describes. And the framework's own mechanics say: don't buy it here. Both of those things are true simultaneously, and that's not a contradiction in the analysis — it's the actual, somewhat uncomfortable output of a disciplined valuation process applied to a business the market has decided deserves a premium multiple most retailers never get.</p>
+      <p>The risk in dismissing the valuation discipline here is the same risk this framework exists to guard against: paying any price for quality eventually stops working, and a 7-year IRR hurdle is specifically designed to catch exactly this situation — wonderful business, unfavorable math. The risk in following the valuation discipline too rigidly is missing that some businesses' multiples reflect optionality (Sparky, Flipkart, retail media's long runway) that a backward-looking SQ formula, calibrated mostly on traditional retailer comps, may structurally underweight. This framework is built to err toward the discipline side of that tradeoff, and it does so here — but the Steel Man's SM-1 concession is a genuine acknowledgment that the formula's fair-value estimate may be conservative for a business genuinely re-rating into a different category.</p>
+    </div>
+  </div>
+
+  <div class="hdr">Pre-Verdict Checklist — Gate 5: Strike Price Calibration</div>
+  <table>
+    <thead><tr><th>Tier</th><th>Price</th><th>Basis</th><th>IRR at Tier</th><th>Upside Trigger</th><th>Downside Trigger</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Margin of Safety</strong></td>
+        <td><strong>$95–$105</strong></td>
+        <td>Updated Base EPS at 17.4x SQ P/E begins to clear the 10% hurdle around this range — still requires meaningful multiple compression from today's level, but far less than required at current price</td>
+        <td class="irr-meh">~6-9% — close to, not fully clearing, the hurdle even here</td>
+        <td>Sparky/advertising growth accelerates further; Flipkart shows credible path to profitability; multiple holds even as price declines (i.e., EPS catches up to price)</td>
+        <td>Consumer spending deteriorates faster than tariff-pass-through assumptions; advertising growth decelerates; broader market multiple compression for mega-cap quality names</td>
+      </tr>
+      <tr>
+        <td><strong>Speculative Entry</strong></td>
+        <td><strong>$105–$120 (current zone)</strong></td>
+        <td>Does not clear 10% IRR in any scenario modeled, including the bull case — current price requires believing the framework's own SQ formula meaningfully understates fair value for this specific business</td>
+        <td class="irr-hi">−1.8% to −18.0% across all four scenarios</td>
+        <td>Same as above, plus: willingness to accept a multi-decade holding thesis that this framework's 7-year window may not fairly capture</td>
+        <td>Same as above</td>
+      </tr>
+      <tr>
+        <td><strong>Platform Entry</strong></td>
+        <td><strong>N/A — not constructed</strong></td>
+        <td>Even with the 15% platform premium applied, the bull-case SQ Target P/E (21.4x) remains far below the current trading multiple — there is no price tier at which the platform premium alone justifies current valuation</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="section-note">Per Rule 5b: even the Margin of Safety tier doesn't comfortably clear 10% — it gets close. This is worth stating plainly: <strong>there may be no price in the next 7 years at which WMT cleanly clears this framework's hurdle without significant multiple compression, given how richly the market has chosen to value this business.</strong> That doesn't make the stock a bad holding for someone prioritizing capital preservation and steady, if unspectacular, compounding — it makes it a poor fit for a framework specifically built around a 10% IRR hurdle over a defined horizon.</div>
+
+  <div class="hdr">Classification &amp; Unified Verdict</div>
+  <table>
+    <tbody>
+      <tr><td>1. Safety Check (≥6.0, no Rot)</td><td><span class="badge badge-pass">PASS — 10.0/10, the cleanest pass in this portfolio's cycle</span></td></tr>
+      <tr><td>2. Quality Check (SQ Target P/E)</td><td><span class="badge badge-neutral">17.4x base / 21.4x bull — both far below the ~42-46x actual trading multiple</span></td></tr>
+      <tr><td>3. Hurdle Check (IRR ≥10% base)</td><td><span class="badge badge-warn">FAILS in every scenario modeled, including the bull case</span></td></tr>
+      <tr><td>Classification</td><td><span class="badge badge-core">CORE</span> at best, and only loosely — Safety passes emphatically, but the Hurdle Check fails across the board rather than splitting between scenarios as it did for BMY/PAYX/MRK. This sits closer to DISQUALIFIED-from-LEADERSHIP-on-valuation-alone than any other name reviewed, while remaining a legitimate CORE/quality holding for non-IRR-driven objectives.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="hdr">Tri-Line Audit</div>
+  <div class="triline">
+    <div class="triline-lbl">Engine</div>
+    <div class="triline-body">Walmart's core retail engine — grocery-anchored, trade-down-beneficiary, scale-advantaged — remains as durable as any business in this portfolio's coverage. On top of it, a genuinely transformative, independently-verified technology layer has emerged: Sparky drives measurably higher order values and units purchased, and Walmart Connect's advertising business is growing 37-46% annually and now contributes roughly a third of operating income. This is the rare case of a "boring" defensive business credibly becoming a structurally higher-margin one, not just a story being told about it.</div>
+  </div>
+  <div class="triline">
+    <div class="triline-lbl">Friction</div>
+    <div class="triline-body">The friction is entirely valuation, not business quality. At 42-46x trailing earnings against a historical Normal P/E of ~29x and VL's own out-year target multiple of 35x, the stock has already re-rated well beyond what even its own improving growth profile mechanically justifies under this framework's formula. VL's own analyst states the obvious conclusion directly: "priced to perfection." A 0.86% dividend yield offers no valuation cushion the way ABBV's 3.2% or BMY's 4.67% does — total return here depends almost entirely on continued multiple persistence plus EPS growth, with no margin for a re-rating event.</div>
+  </div>
+  <div class="triline">
+    <div class="triline-lbl">Exit</div>
+    <div class="triline-body">By 2030, even the bull scenario — Sparky and advertising continuing to compound, Vibe.co and Flipkart contributing, a sustained 15% platform premium — produces a 2030 price of roughly $107, below today's $115.69 entry, because the multiple normalizes from today's extreme even as EPS grows nicely. The only way this investment clears the 10% hurdle from current prices is if the market continues paying a 40x+ multiple indefinitely, which is a bet on permanent multiple expansion/persistence rather than on business execution — a fundamentally different and riskier wager than anything else underwriting a CORE or LEADERSHIP classification elsewhere in this portfolio.</div>
+  </div>
+
+  <div class="verdict-block" style="margin-top:1rem;">
+    <div class="verdict-title">⏳ WAIT FOR STRIKE PRICE — CORE Classification (Valuation-Constrained)</div>
+    <div class="verdict-sub" style="margin-top:.4rem;">
+      <strong>Margin of Safety Entry: $95–$105</strong> (approaches, but doesn't comfortably clear, the 10% hurdle even here — reflects how rich the current multiple is)<br>
+      <strong>Speculative Entry: $105–$120 (current zone)</strong> (fails the hurdle in every scenario, including the bull case)<br>
+      <br>
+      <strong>For new capital:</strong> Wait for a meaningful pullback — this name's risk is multiple-compression risk, not business-quality risk, so patience is the appropriate posture rather than urgency.<br>
+      <strong>For existing holders:</strong> If already owned, this is a legitimate long-term quality holding outside the strict bounds of this framework's 7-year IRR hurdle — the business itself isn't the problem, the entry price is. Not a name this framework can endorse buying at $115.69 under its own stated methodology, regardless of how exceptional the underlying business is.
+    </div>
+  </div>
+
+  <div class="section-note" style="margin-top:.75rem; font-size:11px;">Upgrade triggers: meaningful price pullback (broad market multiple compression, not company-specific bad news) bringing the stock toward the $95-105 zone; advertising/Sparky growth accelerates enough to justify a higher platform premium. Downgrade triggers: tariff costs pass through to consumers faster than modeled, pressuring volume; advertising growth decelerates meaningfully; any sign the AI-driven engagement metrics (Sparky AOV, units) plateau or reverse.</div>
+
+</div>
